@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/yuvrajahire/yuvraj-node-app.git',
+                    url: 'https://github.com/yuvrajahire/Auto-Provisioned-CI-CD-infrastructure.git',
                     credentialsId: 'github-credentials'
             }
         }
