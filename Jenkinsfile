@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        docker build -t yuvrajahire/yuvraj-node-app:${BUILD_NUMBER} .
+                        docker build -t yuvrajahire/yuvraj-node-app -f docker/Dockerfile .
                     """
                 }
             }
