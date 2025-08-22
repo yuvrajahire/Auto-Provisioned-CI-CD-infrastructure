@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_HUB_REPO = "yuvrajahire/yuvraj-node-app"
-        DOCKER_CREDENTIALS = 'Yuvraj@123' // Jenkins credentials ID
+        DOCKER_CREDENTIALS = 'dockerhub-credentials' // Jenkins credentials ID
         APP_NAME = "yuvraj-node-app"
         IMAGE_TAG = "${env.BUILD_NUMBER}"
     }
@@ -16,7 +16,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/yuvrajahire/yuvraj-node-app.git'
+                    url: 'https://github.com/yuvrajahire/yuvraj-node-app.git',
+                    credentialsId: 'github-credentials'
             }
         }
 
