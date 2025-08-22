@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        docker build -t ${DOCKER_HUB_REPO}:${IMAGE_TAG} -f docker/Dockerfile .
+                        docker build -t ${DOCKER_HUB_REPO}:${IMAGE_TAG} -f docker/Dockerfile ./docker
                     """
                 }
             }
